@@ -1,0 +1,25 @@
+
+<div class="container">
+    <div class="row col-md-12 ">
+    <table class="table table-striped custab">
+    <thead>
+    <a href="#/user" class="btn btn-primary pull-right"><b>+</b> Add new categories</a>
+        <tr>
+            <th>ID</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>MOBILE</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+            <tr ng-repeat=" s in data ">
+                <td>{{s._id}}</td>
+                <td>{{s.firstName}}</td>
+                <td>{{s.lastName}}</td>
+                <td>{{s.mobile}}</td>
+                <td class="text-center"><a class='btn btn-info btn-xs' href="#/user/{{s._id}}" ng-click="edit()"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+           
+    </table>
+    </div>
+</div>
